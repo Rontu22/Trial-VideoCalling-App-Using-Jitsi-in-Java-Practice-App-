@@ -3,8 +3,11 @@ package com.example.videocallingappinjava2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
+import org.jitsi.meet.sdk.JitsiMeetActivity;
 import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
 
 import java.net.MalformedURLException;
@@ -21,10 +24,6 @@ public class MainActivity extends AppCompatActivity {
         try {
             JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
                     .setServerURL(new URL(""))
-                    .setRoom("test123")
-                    .setAudioMuted(false)
-                    .setVideoMuted(false)
-                    .setAudioOnly(false)
                     .setWelcomePageEnabled(false)
                     .build();
         } catch (MalformedURLException e) {
@@ -32,5 +31,20 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    public void onJoinButtonClick(View view) {
+        EditText editTextJoinMeeting = findViewById(R.id.conferenceName);
+        String text = editTextJoinMeeting.getText().toString();
+
+        if(text.length() > 0)
+        {
+            JitsiMeetConferenceOptions options
+                    = new JitsiMeetConferenceOptions.Builder()
+                    .setRoom(text)
+                    .build();
+
+            JitsiMeetActivity.launch(this,options);
+        }
     }
 }
