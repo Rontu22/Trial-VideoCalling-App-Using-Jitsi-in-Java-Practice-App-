@@ -10,6 +10,9 @@ Through this app you can create a room and call another person having the room a
  
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/Rontu22/Trial-VideoCalling-App-Using-Jitsi-in-Java-Practice-App-/blob/master/screenshot/1.jpeg)
+![App Screenshot](https://github.com/Rontu22/Trial-VideoCalling-App-Using-Jitsi-in-Java-Practice-App-/blob/master/screenshot/2.jpeg)
+![App Screenshot](https://github.com/Rontu22/Trial-VideoCalling-App-Using-Jitsi-in-Java-Practice-App-/blob/master/screenshot/3.jpeg)
+
 
   
